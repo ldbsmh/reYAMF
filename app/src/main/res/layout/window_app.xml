@@ -269,7 +269,7 @@
                                 android:text="@string/minimize"
                                 android:textColor="?attr/colorOnSurface"
                                 android:textSize="12sp"
-                                android:textStyle="500" />
+                                android:textStyle="bold" />
                         </LinearLayout>
 
                         <!-- fullscreen -->
@@ -310,7 +310,7 @@
                                 android:text="@string/fullscreen"
                                 android:textColor="?attr/colorOnSurface"
                                 android:textSize="12sp"
-                                android:textStyle="500" />
+                                android:textStyle="bold" />
                         </LinearLayout>
 
                         <!-- collapse -->
@@ -352,7 +352,7 @@
                                 android:text="@string/collapse"
                                 android:textColor="?attr/colorOnSurface"
                                 android:textSize="12sp"
-                                android:textStyle="500" />
+                                android:textStyle="bold" />
                         </LinearLayout>
 
                         <!-- close -->
@@ -394,7 +394,7 @@
                                 android:text="@string/close"
                                 android:textColor="?attr/colorOnSurface"
                                 android:textSize="12sp"
-                                android:textStyle="500" />
+                                android:textStyle="bold" />
                         </LinearLayout>
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
