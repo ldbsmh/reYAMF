@@ -5,10 +5,10 @@
     android:id="@+id/root"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:elevation="8dp"
     android:background="@null"
     android:clipChildren="false"
     android:clipToPadding="false"
-    android:elevation="8dp"
     android:theme="@style/Theme.Material3.DayNight">
 
     <View
@@ -16,10 +16,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:visibility="gone"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RelativeLayout
         android:id="@+id/rlBarControllerBottom"
@@ -36,9 +36,9 @@
             android:layout_height="4dp"
             android:layout_marginHorizontal="10dp"
             android:layout_marginTop="7dp"
-            android:backgroundTint="#FFFFFF"
-            app:cardCornerRadius="2dp"
+            android:backgroundTint="#ffffff"
             app:cardElevation="8dp"
+            app:cardCornerRadius="2dp"
             app:strokeWidth="0dp" />
 
         <View
@@ -63,10 +63,10 @@
             android:layout_width="4dp"
             android:layout_height="100dp"
             android:layout_marginStart="7dp"
+            android:backgroundTint="#ffffff"
             android:layout_marginVertical="10dp"
-            android:backgroundTint="#FFFFFF"
-            app:cardCornerRadius="2dp"
             app:cardElevation="8dp"
+            app:cardCornerRadius="2dp"
             app:strokeWidth="0dp" />
 
         <View
@@ -83,11 +83,11 @@
         android:layout_height="wrap_content"
         android:background="@null"
         android:backgroundTint="@android:color/transparent"
-        android:clipChildren="false"
-        android:clipToPadding="false"
         android:elevation="8dp"
         android:paddingBottom="15dp"
         android:visibility="invisible"
+        android:clipChildren="false"
+        android:clipToPadding="false"
         app:cardBackgroundColor="?attr/colorSurface"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -119,9 +119,9 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="2dp"
             android:layout_marginBottom="2dp"
+            android:visibility="invisible"
             android:clipChildren="false"
             android:clipToPadding="false"
-            android:visibility="invisible"
             app:cardBackgroundColor="?attr/colorSurface"
             app:strokeWidth="0dp">
 
@@ -137,19 +137,19 @@
                     android:id="@+id/viewSurface"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toTopOf="@+id/ibSuper"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextureView
                     android:id="@+id/viewTexture"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toTopOf="@+id/ibSuper"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <RelativeLayout
                     android:id="@+id/v_sizePreviewer"
@@ -158,245 +158,167 @@
                     android:background="@drawable/a_bg"
                     android:elevation="5dp"
                     android:visibility="invisible"
-                    app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toTopOf="@+id/ibSuper"
-                    app:layout_constraintStart_toStartOf="parent" />
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/moreActionContainer"
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:layout_marginBottom="4dp"
-                    app:cardBackgroundColor="?attr/colorSurfaceContainerHighest"
-                    app:cardCornerRadius="24dp"
-                    app:cardElevation="2dp"
+                <ImageButton
+                    android:id="@+id/ibSuper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:background="@null"
+                    android:src="@drawable/three_dot_horiz"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:strokeColor="?attr/colorOutlineVariant"
-                    app:strokeWidth="1dp">
-
-                    <ImageButton
-                        android:id="@+id/ibSuper"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="?android:attr/selectableItemBackgroundBorderless"
-                        android:contentDescription="@string/resize_desc"
-                        android:padding="10dp"
-                        android:src="@drawable/three_dot_horiz"
-                        android:tint="?attr/colorOnSurface" />
-                </com.google.android.material.card.MaterialCardView>
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/clSuperLayout"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:background="?attr/colorSurface"
-                    android:padding="16dp"
+                    android:orientation="vertical"
                     android:visibility="invisible"
-                    app:layout_constraintTop_toTopOf="parent"
+                    android:weightSum="2"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent">
+                    app:layout_constraintTop_toTopOf="parent">
 
-                    <com.google.android.material.card.MaterialCardView
-                        android:id="@+id/topCloseCard"
+                    <ImageButton
+                        android:id="@+id/ib_superClose"
                         android:layout_width="56dp"
                         android:layout_height="56dp"
-                        app:cardBackgroundColor="?attr/colorSurfaceContainerHighest"
-                        app:cardCornerRadius="16dp"
-                        app:cardElevation="2dp"
-                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="?android:attr/selectableItemBackground"
+                        android:contentDescription="@string/minimize_desc"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_close_24"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:strokeColor="?attr/colorOutlineVariant"
-                        app:strokeWidth="1dp">
-
-                        <ImageButton
-                            android:id="@+id/ib_superClose"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="?android:attr/selectableItemBackgroundBorderless"
-                            android:contentDescription="@string/minimize_desc"
-                            android:padding="14dp"
-                            android:src="@drawable/ic_close_24"
-                            android:tint="?attr/colorOnSurface" />
-                    </com.google.android.material.card.MaterialCardView>
+                        app:layout_constraintTop_toTopOf="parent" />
 
                     <androidx.constraintlayout.widget.ConstraintLayout
-                        android:id="@+id/actionGrid"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        app:layout_constraintTop_toBottomOf="@id/topCloseCard"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
-                        android:layout_marginTop="20dp">
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
 
-                        <!-- minimize -->
                         <LinearLayout
                             android:id="@+id/linearLayout4"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginBottom="20dp"
                             android:gravity="center"
                             android:orientation="vertical"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent">
 
-                            <com.google.android.material.card.MaterialCardView
+                            <ImageButton
+                                android:id="@+id/ib_minimize"
                                 android:layout_width="56dp"
                                 android:layout_height="56dp"
-                                app:cardBackgroundColor="?attr/colorSecondaryContainer"
-                                app:cardCornerRadius="16dp"
-                                app:cardElevation="2dp"
-                                app:strokeColor="?attr/colorOutlineVariant"
-                                app:strokeWidth="1dp">
-
-                                <ImageButton
-                                    android:id="@+id/ib_minimize"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="?android:attr/selectableItemBackgroundBorderless"
-                                    android:contentDescription="@string/minimize_desc"
-                                    android:padding="14dp"
-                                    android:src="@drawable/ic_minimize"
-                                    android:tint="?attr/colorOnSecondaryContainer" />
-                            </com.google.android.material.card.MaterialCardView>
+                                android:background="?android:attr/selectableItemBackground"
+                                android:contentDescription="@string/minimize_desc"
+                                android:padding="12dp"
+                                android:src="@drawable/ic_minimize" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="@string/minimize"
-                                android:textColor="?attr/colorOnSurface"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
+                                android:layout_marginTop="6dp"
+                                android:gravity="center"
+                                android:text="@string/minimize" />
                         </LinearLayout>
 
-                        <!-- fullscreen -->
                         <LinearLayout
                             android:id="@+id/linearLayout5"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginStart="28dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginBottom="20dp"
                             android:gravity="center"
                             android:orientation="vertical"
-                            app:layout_constraintStart_toEndOf="@id/linearLayout4"
+                            app:layout_constraintStart_toEndOf="@+id/linearLayout4"
                             app:layout_constraintTop_toTopOf="parent">
 
-                            <com.google.android.material.card.MaterialCardView
+                            <ImageButton
+                                android:id="@+id/ib_fullscreen"
                                 android:layout_width="56dp"
                                 android:layout_height="56dp"
-                                app:cardBackgroundColor="?attr/colorPrimaryContainer"
-                                app:cardCornerRadius="16dp"
-                                app:cardElevation="2dp"
-                                app:strokeColor="?attr/colorOutlineVariant"
-                                app:strokeWidth="1dp">
-
-                                <ImageButton
-                                    android:id="@+id/ib_fullscreen"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="?android:attr/selectableItemBackgroundBorderless"
-                                    android:contentDescription="@string/fullscreen_desc"
-                                    android:padding="14dp"
-                                    android:src="@drawable/ic_maximize"
-                                    android:tint="?attr/colorOnPrimaryContainer" />
-                            </com.google.android.material.card.MaterialCardView>
+                                android:background="?android:attr/selectableItemBackground"
+                                android:contentDescription="@string/fullscreen_desc"
+                                android:padding="12dp"
+                                android:src="@drawable/ic_maximize" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="@string/fullscreen"
-                                android:textColor="?attr/colorOnSurface"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
+                                android:layout_marginTop="6dp"
+                                android:gravity="center"
+                                android:text="@string/fullscreen" />
                         </LinearLayout>
 
-                        <!-- collapse -->
                         <LinearLayout
                             android:id="@+id/linearLayout7"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="24dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginEnd="20dp"
                             android:gravity="center"
                             android:orientation="vertical"
-                            app:layout_constraintTop_toBottomOf="@id/linearLayout4"
-                            app:layout_constraintStart_toStartOf="@id/linearLayout4"
-                            app:layout_constraintEnd_toEndOf="@id/linearLayout4">
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toStartOf="@+id/linearLayout5"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
-                            <com.google.android.material.card.MaterialCardView
+                            <ImageButton
+                                android:id="@+id/ib_collapse"
                                 android:layout_width="56dp"
                                 android:layout_height="56dp"
-                                app:cardBackgroundColor="?attr/colorTertiaryContainer"
-                                app:cardCornerRadius="16dp"
-                                app:cardElevation="2dp"
-                                app:strokeColor="?attr/colorOutlineVariant"
-                                app:strokeWidth="1dp">
-
-                                <ImageButton
-                                    android:id="@+id/ib_collapse"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="?android:attr/selectableItemBackgroundBorderless"
-                                    android:contentDescription="@string/fullscreen_desc"
-                                    android:padding="14dp"
-                                    android:src="@drawable/ic_collapse"
-                                    android:tint="?attr/colorOnTertiaryContainer" />
-                            </com.google.android.material.card.MaterialCardView>
+                                android:background="?android:attr/selectableItemBackground"
+                                android:contentDescription="@string/fullscreen_desc"
+                                android:padding="12dp"
+                                android:src="@drawable/ic_collapse" />
 
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="@string/collapse"
-                                android:textColor="?attr/colorOnSurface"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
+                                android:layout_marginTop="6dp"
+                                android:gravity="center"
+                                android:text="@string/collapse" />
                         </LinearLayout>
 
-                        <!-- close -->
                         <LinearLayout
-                            android:id="@+id/closeLayout"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="24dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginTop="20dp"
                             android:gravity="center"
                             android:orientation="vertical"
-                            app:layout_constraintTop_toBottomOf="@id/linearLayout5"
-                            app:layout_constraintStart_toStartOf="@id/linearLayout5"
-                            app:layout_constraintEnd_toEndOf="@id/linearLayout5">
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/linearLayout4"
+                            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
 
-                            <com.google.android.material.card.MaterialCardView
+                            <ImageButton
+                                android:id="@+id/ib_close"
                                 android:layout_width="56dp"
                                 android:layout_height="56dp"
-                                app:cardBackgroundColor="?attr/colorErrorContainer"
-                                app:cardCornerRadius="16dp"
-                                app:cardElevation="2dp"
-                                app:strokeColor="?attr/colorOutlineVariant"
-                                app:strokeWidth="1dp">
-
-                                <ImageButton
-                                    android:id="@+id/ib_close"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
-                                    android:background="?android:attr/selectableItemBackgroundBorderless"
-                                    android:contentDescription="@string/close_desc"
-                                    android:padding="14dp"
-                                    android:src="@drawable/ic_close"
-                                    android:tint="?attr/colorOnErrorContainer" />
-                            </com.google.android.material.card.MaterialCardView>
+                                android:background="?android:attr/selectableItemBackground"
+                                android:contentDescription="@string/close_desc"
+                                android:padding="12dp"
+                                android:src="@drawable/ic_close" />
 
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:text="@string/close"
-                                android:textColor="?attr/colorOnSurface"
-                                android:textSize="12sp"
-                                android:textStyle="bold" />
+                                android:layout_marginTop="6dp"
+                                android:gravity="center"
+                                android:text="@string/close" />
                         </LinearLayout>
-
                     </androidx.constraintlayout.widget.ConstraintLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -407,12 +329,11 @@
         android:id="@+id/ibRightResize"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_marginStart="-20dp"
-        android:layout_marginBottom="-15dp"
         android:background="@android:color/transparent"
         android:contentDescription="@string/resize_desc"
         android:elevation="10dp"
+        android:layout_marginStart="-20dp"
+        android:layout_marginBottom="-15dp"
         app:layout_constraintBottom_toTopOf="@+id/rlBarControllerBottom"
         app:layout_constraintStart_toStartOf="@+id/rlBarControllerSide" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
